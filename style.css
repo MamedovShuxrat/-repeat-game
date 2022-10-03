@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.list-box{
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border: 1px solid #000;
+    list-style: none;
+}
+
+.list-item{
+    border: 1px solid #686262;
+    height: 200px;
+    width: 33%;
+    cursor: pointer;
+
+}
