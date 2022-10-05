@@ -23,5 +23,11 @@
     height: 200px;
     width: 33%;
     cursor: pointer;
+    margin: 1px;
+    transition: all .3s ease-in;
 
+}
+
+.clicked{
+    background-color: aqua;
 }
