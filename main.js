@@ -8,7 +8,7 @@ let arrIndex = []
 let clearItem = function () {
     arrIndex.forEach((item, index) => {
         setTimeout(() => {
-            listItems[item].classList.toggle('clicked')
+            listItems[item].classList.remove('clicked')
         }, 1000 * (index + 1))
         arrIndex = []
     })
@@ -16,14 +16,15 @@ let clearItem = function () {
 
 listItems.forEach(function (items, index) {
     items.addEventListener('click', function (event) {
-        items.classList.add('clicked')
-        arrIndex.push(index)
+        if(!arrIndex.includes(index)){
+            arrIndex.push(index)
+            items.classList.add('clicked')
+        }
         if (listItems.length === arrIndex.length) {
             clearItem()
         }
     })
 })
-
 
 btn.addEventListener('click', function () {
     animate()

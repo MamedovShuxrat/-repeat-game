@@ -5,27 +5,14 @@
     font-family: 'Rubik', sans-serif;
 }
 
-
-body {
-    background: linear-gradient(85deg, #fb63f9, #c2e534);
-}
-
-
 .container {
     padding: 100px 0;
-    width: 1200px;
     margin: 0 auto;
-}
-
-.center {
-    display: flex;
-    justify-content: center;
 }
 
 .box {
     margin-top: 100px;
     text-align: center;
-
 }
 
 .title {
@@ -61,25 +48,23 @@ body {
 }
 
 .list-box {
-    width: 900px;
+    max-width: 90%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     list-style: none;
     margin-top: -100%;
     margin-left: auto;
     margin-right: auto;
-
 }
 
 .list-item {
     border: 1px solid #686262;
     height: 200px;
-    width: 33%;
+    width: 32%;
     cursor: pointer;
     margin: 1px;
     transition: all .3s ease-in;
-
 }
 
 .clicked {
