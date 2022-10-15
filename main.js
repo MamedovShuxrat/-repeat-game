@@ -5,6 +5,7 @@ const btnContainer = document.querySelector('.box')
 
 let arrIndex = []
 
+
 let clearItem = function () {
     arrIndex.forEach((item, index) => {
         setTimeout(() => {
@@ -16,7 +17,7 @@ let clearItem = function () {
 
 listItems.forEach(function (items, index) {
     items.addEventListener('click', function (event) {
-        if(!arrIndex.includes(index)){
+        if (!arrIndex.includes(index)) {
             arrIndex.push(index)
             items.classList.add('clicked')
         }
@@ -27,18 +28,9 @@ listItems.forEach(function (items, index) {
 })
 
 btn.addEventListener('click', function () {
-    animate()
+    listBox.classList.add('animate')
+    btnContainer.classList.add('hide')
 })
-let marginPlus = -100
 
-function animate() {
-    marginPlus += 1.5
-
-    btnContainer.style.display = 'none'
-    listBox.style.marginTop = `${marginPlus}%`
-    if (marginPlus < 0) {
-        requestAnimationFrame(animate)
-    }
-}
 
 
