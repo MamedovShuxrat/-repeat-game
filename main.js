@@ -5,18 +5,17 @@ const btnContainer = document.querySelector('.box')
 
 let arrIndex = []
 
-
 let clearItem = function () {
-    arrIndex.forEach((item, index) => {
+    for (let i = 0; i < arrIndex.length; i++) {
         setTimeout(() => {
-            listItems[item].classList.remove('clicked')
-        }, 1000 * (index + 1))
-        arrIndex = []
-    })
+            let temp = arrIndex.shift()
+            listItems[temp].classList.remove('clicked')
+        }, 500 * (i + 1))
+    }
 }
 
 listItems.forEach(function (items, index) {
-    items.addEventListener('click', function (event) {
+    items.addEventListener('click', function () {
         if (!arrIndex.includes(index)) {
             arrIndex.push(index)
             items.classList.add('clicked')
